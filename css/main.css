@@ -1,0 +1,206 @@
+@charset "UTF-8";
+div, input, textarea {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+html {
+  line-height: 1.15; /*기본 행간 높이*/
+}
+
+.sidebar {
+  position: fixed;
+  z-index: 9999;
+  width: 164px;
+  height: 100%;
+  background: #494CB4;
+  transform: translateX(-120px);
+  transition: all 1s;
+  color: white;
+}
+.sidebar:hover {
+  transform: translateX(0px);
+}
+.sidebar:hover .sidebar-menu {
+  flex-direction: row-reverse;
+  justify-content: start;
+  padding: 0px 0px 0px 20px;
+  align-items: start;
+}
+
+.sidebar-menu {
+  display: flex;
+  justify-content: space-between;
+}
+.sidebar-menu p {
+  font-size: 18px;
+  padding: 12px 0px 0px 15px;
+}
+
+.sidemenu-icon {
+  padding: 20px 12px 12px 10px;
+}
+
+.nav-container {
+  height: 60px;
+  width: 100%;
+  background: white;
+  padding: 12px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-search {
+  margin-left: 45px;
+}
+.nav-search input {
+  width: 180px;
+  padding: 5px;
+  border: 1px solid #7E7E7E;
+  border-radius: 4px 0px 0px 4px;
+  transition: width 1s;
+}
+.nav-search input:focus {
+  width: 400px;
+  outline: none;
+}
+.nav-search button {
+  left: 140px;
+  background: #343A40;
+  color: white;
+  border: none;
+  padding: 6px 12px 6px 12px;
+  border-radius: 0px 4px 4px 0px;
+}
+
+.nav-account {
+  padding: 10px 30px 7px 7px;
+}
+
+.nav-name {
+  padding: 5px 10px 0px 7px;
+}
+
+.account-font {
+  color: #7E7E7E;
+}
+
+.dashboard-container {
+  height: 220px;
+  padding: 20px 0px 0px 70px;
+}
+
+.dashboard-items {
+  display: flex;
+  margin-top: 30px;
+}
+
+.dashboard-skyblue {
+  margin: 0px 40px 25px 0px;
+  display: flex;
+  position: relative;
+  background: white;
+  width: 240px;
+  height: 105px;
+  border-radius: 5px;
+  border-left: 4px solid #85CDEA;
+  padding: 23px 25px 0px 25px;
+}
+.dashboard-skyblue p {
+  margin: 0px 0px 8px 0px;
+}
+
+.dashboard-green {
+  margin: 0px 40px 25px 0px;
+  display: flex;
+  position: relative;
+  background: white;
+  width: 240px;
+  height: 105px;
+  border-radius: 5px;
+  border-left: 4px solid #33C550;
+  padding: 23px 25px 0px 25px;
+}
+.dashboard-green p {
+  margin: 0px 0px 8px 0px;
+}
+
+.dashboard-blue {
+  margin: 0px 40px 25px 0px;
+  display: flex;
+  position: relative;
+  background: white;
+  width: 240px;
+  height: 105px;
+  border-radius: 5px;
+  border-left: 4px solid #5053B6;
+  padding: 23px 25px 0px 25px;
+}
+.dashboard-blue p {
+  margin: 0px 0px 8px 0px;
+}
+
+.dashboard-yellow {
+  margin: 0px 40px 25px 0px;
+  display: flex;
+  position: relative;
+  background: white;
+  width: 240px;
+  height: 105px;
+  border-radius: 5px;
+  border-left: 4px solid #FFC951;
+  padding: 23px 25px 0px 25px;
+}
+.dashboard-yellow p {
+  margin: 0px 0px 8px 0px;
+}
+
+.dashboard-icon {
+  position: absolute;
+  left: 190px;
+  top: 25px;
+  font-size: 30px;
+}
+
+.chart-container {
+  margin-left: 70px;
+  width: 700px;
+  border-radius: 5px;
+  float: left;
+}
+
+.title {
+  padding: 13px 0px 7px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.chart {
+  padding: 25px;
+  background: white;
+  border-radius: 0px 0px 5px 0px;
+}
+
+.tasks-container {
+  margin-left: 30px;
+  width: 350px;
+  float: left;
+}
+
+.tasks-items {
+  background: white;
+  padding: 10px;
+  border: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+}
+.tasks-items p {
+  margin: 0px;
+}
+
+.task-count {
+  padding: 5px 10px 0px 10px;
+}/*# sourceMappingURL=main.css.map */

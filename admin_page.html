@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin_Page</title>
+    <link href="fontawesome/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body style="background:#eee;">
+
+    <div class="sidebar">
+        <div class="sidebar-menu">
+            <p>Home</p>
+            <i class="fas fa-home sidemenu-icon"></i>
+        </div>
+        <div class="sidebar-menu">
+            <p>Services</p>
+            <i class="fas fa-headphones sidemenu-icon"></i>
+        </div>
+        <div class="sidebar-menu">
+            <p>Alerts</p>
+            <i class="fas fa-flag sidemenu-icon"></i>
+        </div>
+        <div class="sidebar-menu">
+            <p>Stats</p>
+            <i class="fas fa-chart-pie sidemenu-icon"></i>
+        </div>
+    </div>
+
+    <div class="nav-container shadow-sm">
+        <div class="nav-search">
+            <form action="" style="display: flex;">
+                <input type="text" placeholder="Search">
+                <button><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        <div style="flex-grow: 1;"></div>
+        <div style="display: flex;" class="account-font">
+            <i class="fas fa-bell nav-account"></i>
+            <i class="fas fa-envelope nav-account"></i>
+            <p class="nav-name">Minny Park</p>
+        </div>
+    </div>
+
+    <div class="dashboard-container">
+        <h4 style="font-weight: bold">Dashboard</h4>
+
+        <div class="dashboard-items">
+            <div class="dashboard-skyblue shadow-sm">
+                <div>
+                    <p>Earnings (Monthly)</p>
+                    <p>$400,000</p>
+                </div>
+                <div class="dashboard-icon">
+                    <i class="fas fa-calendar"></i>
+                </div>
+            </div>
+
+            <div class="dashboard-green shadow-sm">
+                <div>
+                    <p>Earnings (Annual)</p>
+                    <p>$800,000</p>
+                </div>
+                <div class="dashboard-icon">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+            </div>
+
+            <div class="dashboard-blue shadow-sm">
+                <div>
+                    <p>Tasks</p>
+                    <p>13</p>
+                </div>
+                <div class="dashboard-icon">
+                    <i class="fas fa-tasks"></i>
+                </div>
+            </div>
+
+            <div class="dashboard-yellow shadow-sm">
+                <div>
+                    <p>Requests</p>
+                    <p>26</p>
+                </div>
+                <div class="dashboard-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--chart-->
+    <div class="chart-container shadow">
+        <h6 class="title"style="font-weight: bold">Earnings Overview</h6>
+        <div class="chart">
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <canvas id="myChart" width="100" height="55"></canvas>
+            <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                    datasets: [{
+                        label: 'Monthly',
+                        data: [0, 10, 5, 2, 20, 30, 45],
+                        backgroundColor: 'rgb(73, 75, 180)',
+                        borderWidth: 1,
+                        fill: true,
+                        tension: 0.3
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+            </script>
+        </div>
+    </div>
+
+    <div class="tasks-container shadow">
+        <h6 class="title"style="font-weight: bold">Tasks</h6>
+
+        <div class="tasks-items">
+            <p>Borrowed Items</p>
+            <span class="badge rounded-pill bg-primary task-count">14</span>
+        </div>
+        <div class="tasks-items">
+            <p>Trello requests</p>
+            <span class="badge rounded-pill bg-primary task-count">2</span>
+        </div>
+        <div class="tasks-items">
+            <p>Marked Comments</p>
+            <span class="badge rounded-pill bg-primary task-count">1</span>
+        </div>
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
