@@ -117,6 +117,7 @@
 .dashboard-items{
     display: flex;
     margin-top: 30px;
+    p{margin:0px 0px 8px 0px;}
 }
 
 @mixin dashboard-frame($color){
@@ -129,12 +130,6 @@
     border-radius: 5px;
     border-left: 4px solid $color;
     padding: 23px 25px 0px 25px;
-    p{margin:0px 0px 8px 0px;}
-
-    @media screen and (max-width: 768px){
-        margin-bottom: 10px;
-        width: 96%;
-    }
 }
 
 .dashboard-skyblue{
@@ -210,6 +205,11 @@
 
     .dashboard-icon{
         left: 90%
+    }
+
+    .dashboard-skyblue, .dashboard-green, .dashboard-blue, .dashboard-yellow{
+        margin-bottom: 10px;
+        width: 96%;
     }
 
     .chart-container{

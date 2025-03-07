@@ -122,6 +122,9 @@ html {
   display: flex;
   margin-top: 30px;
 }
+.dashboard-items p {
+  margin: 0px 0px 8px 0px;
+}
 
 .dashboard-skyblue {
   margin: 0px 40px 25px 0px;
@@ -133,15 +136,6 @@ html {
   border-radius: 5px;
   border-left: 4px solid #85CDEA;
   padding: 23px 25px 0px 25px;
-}
-.dashboard-skyblue p {
-  margin: 0px 0px 8px 0px;
-}
-@media screen and (max-width: 768px) {
-  .dashboard-skyblue {
-    margin-bottom: 10px;
-    width: 96%;
-  }
 }
 
 .dashboard-green {
@@ -155,15 +149,6 @@ html {
   border-left: 4px solid #33C550;
   padding: 23px 25px 0px 25px;
 }
-.dashboard-green p {
-  margin: 0px 0px 8px 0px;
-}
-@media screen and (max-width: 768px) {
-  .dashboard-green {
-    margin-bottom: 10px;
-    width: 96%;
-  }
-}
 
 .dashboard-blue {
   margin: 0px 40px 25px 0px;
@@ -176,15 +161,6 @@ html {
   border-left: 4px solid #5053B6;
   padding: 23px 25px 0px 25px;
 }
-.dashboard-blue p {
-  margin: 0px 0px 8px 0px;
-}
-@media screen and (max-width: 768px) {
-  .dashboard-blue {
-    margin-bottom: 10px;
-    width: 96%;
-  }
-}
 
 .dashboard-yellow {
   margin: 0px 40px 25px 0px;
@@ -196,15 +172,6 @@ html {
   border-radius: 5px;
   border-left: 4px solid #FFC951;
   padding: 23px 25px 0px 25px;
-}
-.dashboard-yellow p {
-  margin: 0px 0px 8px 0px;
-}
-@media screen and (max-width: 768px) {
-  .dashboard-yellow {
-    margin-bottom: 10px;
-    width: 96%;
-  }
 }
 
 .dashboard-icon {
@@ -264,6 +231,10 @@ html {
   }
   .dashboard-icon {
     left: 90%;
+  }
+  .dashboard-skyblue, .dashboard-green, .dashboard-blue, .dashboard-yellow {
+    margin-bottom: 10px;
+    width: 96%;
   }
   .chart-container {
     margin-top: 320px;
