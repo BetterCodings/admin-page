@@ -33,24 +33,21 @@ html {
 .sidebar:hover {
   transform: translateX(0px);
 }
-.sidebar:hover .sidebar-menu {
-  flex-direction: row-reverse;
-  justify-content: start;
-  padding: 0px 0px 0px 20px;
-  align-items: start;
+.sidebar:hover i {
+  transform: translateX(-3px);
 }
 
 .sidebar-menu {
   display: flex;
-  justify-content: space-between;
+}
+.sidebar-menu i {
+  padding: 20px 0px 12px 15px;
+  transform: translateX(117px);
+  transition: all 1s;
 }
 .sidebar-menu p {
   font-size: 18px;
   padding: 12px 0px 0px 15px;
-}
-
-.sidemenu-icon {
-  padding: 20px 12px 12px 10px;
 }
 
 .nav-container {
