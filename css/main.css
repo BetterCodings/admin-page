@@ -11,6 +11,10 @@ html {
   line-height: 1.15; /*기본 행간 높이*/
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .sidebar {
   position: fixed;
   z-index: 9999;
@@ -75,6 +79,12 @@ html {
   border: none;
   padding: 6px 12px 6px 12px;
   border-radius: 0px 4px 4px 0px;
+}
+
+.unread {
+  top: 5px;
+  left: 24px;
+  padding: 4px 5px 4px 5px;
 }
 
 .nav-account {
