@@ -4,6 +4,11 @@
     font-weight: bold;
 }
 
+.footer {
+    clear : both;
+    float: none;
+}
+
 .sidebar{
     position: fixed;
     z-index: 9999;
@@ -45,7 +50,9 @@
     width: 100%;
     background: white;
     padding: 12px;
+}
 
+.nav-desktop-container{
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -96,6 +103,15 @@
     color: #7E7E7E;
 }
 
+.nav-mobile-container{
+    float: right;
+    border-radius: 5px;
+}
+
+.nav-mobile-alarm{
+    margin-right: 90px;
+}
+
 .dashboard-container{
     height: 220px;
     padding: 20px 0px 0px 70px;
@@ -106,7 +122,7 @@
     margin-top: 30px;
 }
 
-@mixin dashboard-color($color){
+@mixin dashboard-frame($color){
     margin: 0px 40px 25px 0px;
     display: flex;
     position: relative;
@@ -117,22 +133,27 @@
     border-left: 4px solid $color;
     padding: 23px 25px 0px 25px;
     p{margin:0px 0px 8px 0px;}
+
+    @media screen and (max-width: 768px){
+        margin-bottom: 10px;
+        width: 96%;
+    }
 }
 
 .dashboard-skyblue{
-    @include dashboard-color(#85CDEA);
+    @include dashboard-frame(#85CDEA);
 }
 
 .dashboard-green{
-    @include dashboard-color(#33C550);
+    @include dashboard-frame(#33C550);
 }
 
 .dashboard-blue{
-    @include dashboard-color(#5053B6);
+    @include dashboard-frame(#5053B6);
 }
 
 .dashboard-yellow{
-    @include dashboard-color(#FFC951);
+    @include dashboard-frame(#FFC951);
 }
 
 .dashboard-icon{
@@ -145,6 +166,7 @@
 .chart-container{
     margin-left: 70px;
     width: 700px;
+    height: 456px;
     border-radius: 5px;
     float: left;
 }
@@ -164,6 +186,7 @@
     margin-left: 30px;
     width: 350px;
     float: left;
+    border-radius: 5px;
 }
 
 .tasks-items{
@@ -177,4 +200,29 @@
 
 .task-count{
     padding: 5px 10px 0px 10px;
+}
+
+@media screen and (max-width: 768px){
+    .nav-desktop-container{
+        display: none;
+    }
+
+    .dashboard-items{
+        flex-direction: column;   
+    }
+
+    .dashboard-icon{
+        left: 90%
+    }
+
+    .chart-container{
+        margin-top: 320px;
+        width: 87%;
+        height: 70%;
+    }
+
+    .tasks-container{
+        margin: 10px 0px 50px 70px;
+        width: 87%;
+    }
 }
